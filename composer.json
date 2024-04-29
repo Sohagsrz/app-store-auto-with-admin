@@ -1,0 +1,12 @@
+{
+    "require": {
+        "delight-im/auth": "^8.3",
+        "illuminate/database": "^9.52",
+        "vlucas/phpdotenv": "^5.6",
+        "altorouter/altorouter": "^2.0",    
+        "phpmailer/phpmailer": "^6.9",
+        "delight-im/file-upload": "^1.2",
+        "nelexa/google-play-scraper": "0.4.0.9",
+        "symfony/cache": "^6.0"
+    }
+}

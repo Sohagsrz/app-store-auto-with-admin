@@ -1,0 +1,42 @@
+$name = 'sohagsrz';
+$email= 'mdsohagislam25@gmail.com';
+$pass= '12345';
+try {
+    $username = random_username($name);
+
+    $userId = auth()->register($email,$pass, $username, function ($selector, $token) {
+         
+    
+     auth()->confirmEmail($selector, $token);
+
+     });
+    //  auth()->admin()->logInAsUserByEmail($google_account_info->email);
+
+    // update_field('user', 'accountLoginType', $userId, 'google'); 
+
+    //  redirect('/dashboard');
+
+ 
+}
+catch (\Delight\Auth\InvalidEmailException $e) {
+    die('Invalid email address');
+}
+catch (\Delight\Auth\InvalidPasswordException $e) {
+    die('Invalid password');
+}
+catch (\Delight\Auth\UserAlreadyExistsException $e) {
+    // auth()->admin()->logInAsUserByEmail($google_account_info->email);
+    // redirect('/dashboard');
+}
+catch (\Delight\Auth\TooManyRequestsException $e) {
+    die('Too many requests');
+}
+
+ 
+ 
+
+ catch(Exception $e) {
+ var_dump($e->getMessage());
+}
+
+exit();
